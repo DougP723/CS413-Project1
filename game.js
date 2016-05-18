@@ -8,6 +8,7 @@ var stage = new PIXI.Container();
 //Initialize game textures
 var guy_texture = PIXI.Texture.fromImage("guy.png");
 var dog_texture = PIXI.Texture.fromImage("dog-1.png");
+var dog_texture_left = PIXI.Texture.fromImage("dog-1-left.png");
 
 //Initialize sprites
 var guy_sprite = new PIXI.Sprite(guy_texture);
@@ -47,12 +48,14 @@ function keydownEventHandler(e) {
 		dog.position.y +=10;
 	}
 
-	if (e.keyCode == 65) {
+	if (e.keyCode == 65) { //A key
 		dog.position.x -= 10;
+		dog_sprite.texture = dog_texture_left;
 	}
 
-	if (e.keyCode == 68) {
+	if (e.keyCode == 68) { //D key
 		dog.position.x += 10;
+		dog_sprite.texture = dog_texture;
 	}
 }
 
