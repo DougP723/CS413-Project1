@@ -7,7 +7,7 @@ var stage = new PIXI.Container();
 
 //Initialize game textures
 var guy_texture = PIXI.Texture.fromImage("guy.png");
-var dog_texture = PIXI.Texture.fromImage("dog.png");
+var dog_texture = PIXI.Texture.fromImage("dog-1.png");
 
 //Initialize sprites
 var guy_sprite = new PIXI.Sprite(guy_texture);
