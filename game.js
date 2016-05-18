@@ -5,21 +5,24 @@ gameport.appendChild(renderer.view);
 
 var stage = new PIXI.Container();
 
-var texture = PIXI.Texture.fromImage("cs413.png");
+var guy_texture = PIXI.Texture.fromImage("guy.png");
+var dog_texture = PIXI.Texture.fromImage("dog.png");
 
-var sprite = new PIXI.Sprite(texture);
+var guy_sprite = new PIXI.Sprite(guy_texture);
+var dog_sprite = new PIXI.Sprite(dog_texture);
 
-sprite.anchor.x = 0.5;
-sprite.anchor.y = 0.5;
+guy_sprite.anchor.x = 0.5;
+guy_sprite.anchor.y = 0.5;
 
-sprite.position.x = 200;
-sprite.position.y = 200;
+dog
 
-stage.addChild(sprite);
+guy_sprite.position.x = 100;
+guy_sprite.position.y = 350;
+
+stage.addChild(guy_sprite);
 
 function animate() {
 	requestAnimationFrame(animate);
-	sprite.rotation += 0.1;
 	renderer.render(stage);
 }
 animate();
