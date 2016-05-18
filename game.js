@@ -14,12 +14,17 @@ var dog_sprite = new PIXI.Sprite(dog_texture);
 guy_sprite.anchor.x = 0.5;
 guy_sprite.anchor.y = 0.5;
 
-dog
+dog_sprite.anchor.x = 0.5;
+dog_sprite.anchor.y = 0.5;
+
+dog_sprite.position.x = 200;
+dog_sprite.position.y = 350;
 
 guy_sprite.position.x = 100;
 guy_sprite.position.y = 350;
 
 stage.addChild(guy_sprite);
+stage.addChild(dog_sprite);
 
 function animate() {
 	requestAnimationFrame(animate);
