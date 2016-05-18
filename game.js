@@ -13,7 +13,6 @@ var dog_texture = PIXI.Texture.fromImage("dog-1.png");
 var guy_sprite = new PIXI.Sprite(guy_texture);
 var dog_sprite = new PIXI.Sprite(dog_texture);
 
-
 //Create the dog container
 var dog = new PIXI.Container();
 dog.position.x = 175;
@@ -27,9 +26,9 @@ dog_sprite.anchor.y = 0.5;
 dog_sprite.position.x = 0;
 dog_sprite.position.y = 0;
 
+
 guy_sprite.anchor.x = 0.5;
 guy_sprite.anchor.y = 0.5;
-
 
 
 guy_sprite.position.x = 100;
@@ -37,6 +36,27 @@ guy_sprite.position.y = 350;
 
 stage.addChild(guy_sprite);
 
+
+function keydownEventHandler(e) {
+
+	if (e.keyCode == 87) { //W key
+		dog.position.y -= 10;
+	}
+
+	if (e.keyCode == 83) { //S key
+		dog.position.y +=10;
+	}
+
+	if (e.keyCode == 65) {
+		dog.position.x -= 10;
+	}
+
+	if (e.keyCode == 68) {
+		dog.position.x += 10;
+	}
+}
+
+document.addEventListener('keydown', keydownEventHandler);
 
 function animate() {
 	requestAnimationFrame(animate);
